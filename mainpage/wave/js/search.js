@@ -278,10 +278,10 @@ input2.addEventListener("focus", function () {
 //   searchResult.classList.remove("show");
 // });
 
-mainHeader.addEventListener("click", function () {
+mainHeader?.addEventListener("click", function () {
   searchResult.classList.remove("show");
 });
-mainFooter.addEventListener("click", function () {
+mainFooter?.addEventListener("click", function () {
   searchResult.classList.remove("show");
 });
 

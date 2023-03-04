@@ -9,10 +9,13 @@ header {
   height: 7vh;
   z-index: 1;
 }
+.navbar {
+  background-color: white;
+}
 .profile-title {
   line-height: 7vh;
   padding-left: 2vw;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 .profile-title h1 {
   font-size: 2.3rem;

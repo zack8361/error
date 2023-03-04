@@ -106,7 +106,7 @@ let musicIndex = 1;
 function loadMusic(num) {
   musicName_smy.innerText = allMusic[num - 1].name;
   musicArtist.innerText = allMusic[num - 1].artist;
-  musicAudio.src = `./songs/${allMusic[num - 1].audio}.mp3`;
+  musicAudio.src = `../playlist/songs/${allMusic[num - 1].audio}.mp3`;
 }
 
 // 플레이 버튼
@@ -242,9 +242,9 @@ for (let k = 0; k < allMusic.length; k++) {
   let art_li = `
     <li data-index="${k + 1}">
         <div>
-            <img src="./img/${allMusic[k].img}.jpg" alt="album_art" class="${
-    allMusic[k].img
-  }">
+            <img src="../playlist/img/${
+              allMusic[k].img
+            }.jpg" alt="album_art" class="${allMusic[k].img}">
         </div>
     </li>
     `;
@@ -256,7 +256,6 @@ musicProgress.addEventListener("click", (e) => {
   let progressWidth = musicProgress.clientWidth;
   let clickedOffsetX = e.offsetX;
   let songDuration = musicAudio.duration;
-
   musicAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
   playMusic();
 });
@@ -332,7 +331,7 @@ for (let i = 0; i < allMusic.length; i++) {
                 <em>${allMusic[i].name}</em>
                 <p>${allMusic[i].artist}</p>
             </div>
-            <audio class="${allMusic[i].audio}" src="./songs/${
+            <audio class="${allMusic[i].audio}" src="../playlist/songs/${
     allMusic[i].audio
   }.mp3"></audio>
             <span id="${allMusic[i].audio}" class="audio-duration">3:36</span>
@@ -434,7 +433,7 @@ window.addEventListener("load", () => {
   }
 });
 
-//💜
+//:purple_heart:
 MusicListBtn.addEventListener("click", function () {
   if (MusicListBtn.classList.contains("fa-regular")) {
     MusicListBtn.classList.remove("fa-regular");

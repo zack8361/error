@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./realProfile.css" />
+    <!-- <link rel="stylesheet" href="./realProfile.css" /> -->
+    <link rel="stylesheet" href="../selectPage/realProfile.css" />
+    <!-- 모달 css -->
+    <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" />
+    <!-- <link rel="stylesheet" href="../mainpage/wave/css/wave.css" /> -->
     <link rel="stylesheet" href="../mainpage/wave/css/wave.css" />
+
     <link rel="stylesheet" href="../mainpage/wave/css/modals.css" />
     <link rel="stylesheet" href="../mainpage/select-page/css/header.css" />
     <link rel="stylesheet" href="../mainpage/select-page/css/select.css" />
+
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/baf7824541.js"
@@ -17,13 +23,18 @@
     ></script>
 
     <script defer src="../mainpage/wave/js/search.js"></script>
-    <script src="../../item.json"></script>
+    <script src="../item.json"></script>
+    <!-- 모달 js -->
+    <script defer src="../mainpage/wave/js/modal.js"></script>
+    <script defer src="../mainpage/select-page/js/header.js"></script>
   </head>
   <body>
     <div class="navbar">
       <div class="leftBox">
         <div class="homeIcon">
-          <a class="homeBtn" href="#"><i class="fa-solid fa-house"></i></a>
+          <a class="homeBtn" href="./index.html"
+            ><i class="fa-solid fa-house"></i
+          ></a>
         </div>
         <div class="searchWrap">
           <!-- 검색창 -->
@@ -33,6 +44,7 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
+
           <!-- 숨겨진 검색 결과 -->
           <div class="searchResult">
             <!-- 랭크 1~5 -->
@@ -78,6 +90,7 @@
                 <p class="artistName"></p>
               </div>
             </div>
+
             <!-- 검색 결과 -->
             <div class="music">
               <!-- <div class="musicNoResult">
@@ -92,6 +105,7 @@
           </div>
         </div>
       </div>
+
       <div class="rightBox">
         <div class="qrIcon">
           <a class="qrBtn" href="#">
@@ -179,7 +193,7 @@
         </div>
         <div class="hee_right">
           <div class="content_img">
-            <img src="./img/csh_img.png" alt="csh_page" />
+            <img src="../selectPage/img/csh_img.png" alt="csh_page" />
           </div>
         </div>
         <div class="song_right">
@@ -195,6 +209,55 @@
           <div class="btn btn_song"></div>
           <div class="btn btn_joon"></div>
         </div>
+      </div>
+    </div>
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="title">
+          <div class="modal-title">
+            <a href="#" id="closeBtn"
+              ><i class="fa-solid fa-circle-xmark"></i
+            ></a>
+            <a href="#"><i class="fa-solid fa-folder-open"></i></a>
+            <span class="textContent">% Welcome to KDT#Log terminal! %</span>
+          </div>
+        </div>
+        <section class="cmd">
+          <div class="inner">
+            <!-- <div class="welcome">% Welcome to KDT#Log terminal! %</div> -->
+            <div class="line1">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - -
+            </div>
+            <div class="command">COMMANDS</div>
+            <div class="commands-line">
+              <div>whoami</div>
+              <div>pwd</div>
+              <div>exit</div>
+              <div>ls</div>
+              <div>cd</div>
+              <div>clear</div>
+            </div>
+            <div class="line2">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - -
+            </div>
+            <br />
+            <div id="empty" class="empty"></div>
+
+            <div class="log">
+              <div class="log-1">
+                <span>ch@</span>
+                <span>:</span>
+                <span>MacBookAir ~ </span>
+                <span>%&nbsp;</span>
+              </div>
+              <input type="text" class="input" onkeyup="fnEnterkey();" />
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <script>

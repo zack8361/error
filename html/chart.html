@@ -34,8 +34,11 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="./css/chart.css " />
-    <link rel="stylesheet" href="../mainpage/wave/css/modals.css" />
+
+    <!-- <link rel="stylesheet" href="./css/chart.css " /> -->
+    <link rel="stylesheet" href="../music-chart/css/chart.css" />
+    <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" />
+    <!-- <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" /> -->
 
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -46,10 +49,12 @@
     <script src="../dance.json"></script>
     <script src="../rap.json"></script>
     <script src="../rb.json"></script>
+
     <script defer src="../mainpage/wave/js/modal.js"></script>
 
     <!-- JS 연결 -->
-    <script defer src="./js/chart.js"></script>
+    <!-- <script defer src="./js/chart.js"></script> -->
+    <script defer src="../music-chart/js/chart.js"></script>
     <script defer src="../mainpage/select-page/js/header.js"></script>
   </head>
   <body>
@@ -57,7 +62,9 @@
     <div class="navbar">
       <div class="leftBox">
         <div class="homeIcon">
-          <a class="homeBtn" href="#"><i class="fa-solid fa-house"></i></a>
+          <a class="homeBtn" href="./index.html"
+            ><i class="fa-solid fa-house"></i
+          ></a>
         </div>
         <div class="searchWrap">
           <input class="searchInput" type="text" placeholder="노래 검색" />
@@ -136,7 +143,7 @@
         <p class="left__text-sm">SongHeeHo</p>
         <h1 class="left__text-lg">What's hot this weekend?</h1>
         <p class="left__text-md">Listen to a variety of popular music.</p>
-        <a href="../playlist/playList.html" class="left__btn">Go to playlist</a>
+        <a href="./playList.html" class="left__btn">Go to playlist</a>
       </section>
 
       <section class="popupVideo">
@@ -144,7 +151,7 @@
         <section
           data-video="js1CtxSY38I"
           class="right__card"
-          style="background-image: url(./img/attention.jpeg)"
+          style="background-image: url(../music-chart/img/attention.jpeg)"
         >
           <p class="right__text-sm">CSH's Pick !</p>
           <h1 class="right__text-lg">Attention - NewJeans</h1>
@@ -154,7 +161,7 @@
           data-video="yHWWGm0nxYk"
           class="right__card"
           style="
-            background-image: url(./img/melody.jpeg);
+            background-image: url(../music-chart/img/melody.jpeg);
             background-position: center right;
           "
         >
@@ -165,7 +172,7 @@
         <section
           data-video="uR8Mrt1IpXg"
           class="right__card"
-          style="background-image: url(./img/psycho.jpeg)"
+          style="background-image: url(../music-chart/img/psycho.jpeg)"
         >
           <p class="right__text-sm">SMY's Pick !</p>
           <h1 class="right__text-lg">Psycho - Red Velvet</h1>
@@ -174,7 +181,7 @@
         <section
           data-video="Xp8Ep1W-azw"
           class="right__card"
-          style="background-image: url(./img/goodbye.jpeg)"
+          style="background-image: url(../music-chart/img/goodbye.jpeg)"
         >
           <p class="right__text-sm">KHJ's Pick !</p>
           <h1 class="right__text-lg">Goodbye - 박효신</h1>

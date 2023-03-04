@@ -13,24 +13,31 @@
       href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" />
     <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/b4e1a12ac1.js"
       crossorigin="anonymous"
     ></script>
     <!-- main -->
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./main.js"></script>
-    <link rel="stylesheet" href="./header.css" />
-    <script defer src="./header.js"></script>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link rel="stylesheet" href="../playlist/style.css" />
+
+    <!-- <script defer src="../playlist/main.js"></script> -->
+    <link rel="stylesheet" href="../playlist/header.css" />
+    <script defer src="../playlist/header.js"></script>
     <script defer src="../mainpage/wave/js/search.js"></script>
     <script src="../item.json"></script>
+    <script defer src="../mainpage/wave/js/modal.js"></script>
+    <script defer src="../playlist/main.js"></script>
   </head>
   <body>
     <div class="navbar">
       <div class="leftBox">
         <div class="homeIcon">
-          <a class="homeBtn" href="#"><i class="fa-solid fa-house"></i></a>
+          <a class="homeBtn" href="./index.html"
+            ><i class="fa-solid fa-house"></i
+          ></a>
         </div>
         <div class="searchWrap">
           <!-- 검색창 -->
@@ -112,41 +119,148 @@
         </div>
       </div>
     </div>
+
+    <!-- 헤더 터미널 모달 부분 -->
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="title">
+          <div class="modal-title">
+            <a href="#" id="closeBtn"
+              ><i class="fa-solid fa-circle-xmark"></i
+            ></a>
+            <a href="#"><i class="fa-solid fa-folder-open"></i></a>
+            <span class="textContent">% Welcome to KDT#Log terminal! %</span>
+          </div>
+        </div>
+
+        <section class="cmd">
+          <div class="inner">
+            <!-- <div class="welcome">% Welcome to KDT#Log terminal! %</div> -->
+            <div class="line1">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - -
+            </div>
+
+            <div class="command">COMMANDS</div>
+            <div class="commands-line">
+              <div>whoami</div>
+              <div>pwd</div>
+              <div>exit</div>
+              <div>ls</div>
+              <div>cd</div>
+              <div>clear</div>
+            </div>
+            <div class="line2">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - -
+            </div>
+            <br />
+            <div id="empty" class="empty"></div>
+
+            <div class="log">
+              <div class="log-1">
+                <span>ch@</span>
+                <span>:</span>
+                <span>MacBookAir ~ </span>
+                <span>%&nbsp;</span>
+              </div>
+              <input type="text" class="input" onkeyup="fnEnterkey();" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <figure>
       <div class="bg_video">
         <ul>
           <li class="video_on" data-index="1">
-            <video src="./img/video1.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video1.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="2">
-            <video src="./img/video2.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video2.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="3">
-            <video src="./img/video3.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video3.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="4">
-            <video src="./img/video4.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video4.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="5">
-            <video src="./img/video5.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video5.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="6">
-            <video src="./img/video6.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video6.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="7">
-            <video src="./img/video7.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video7.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="8">
-            <video src="./img/video8.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video8.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="9">
-            <video src="./img/video9.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video9.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="10">
-            <video src="./img/video10.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video10.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
           <li data-index="11">
-            <video src="./img/video11.mp4" autoplay="" muted="" loop=""></video>
+            <video
+              src="../playlist/img/video11.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
           </li>
         </ul>
       </div>

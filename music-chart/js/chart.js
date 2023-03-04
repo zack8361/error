@@ -632,7 +632,7 @@ const images = [
 //random으로 이미지 나타내기
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 // 배경 이미지 넣는 형식 url('img주소')
-const bgImage = `url(./img/${chosenImage})`;
+const bgImage = `url(../music-chart/img/${chosenImage})`;
 // main에 추가
 const chartSectionEl = document.querySelector(".main_section");
 chartSectionEl.style.backgroundImage = bgImage;

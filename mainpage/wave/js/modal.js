@@ -62,7 +62,9 @@ function fnEnterkey() {
       input.value !== "cd hojoon" &&
       input.value !== "cd .." &&
       input.value !== "cd git" &&
-      input.value !== "cd home"
+      input.value !== "cd home" &&
+      input.value !== "cd ranking" &&
+      input.value !== "cd music"
     ) {
       const dummy = document.createElement("div");
       dummy.innerHTML = mac.innerText;
@@ -118,6 +120,8 @@ function fnEnterkey() {
       modal.style.display = "none";
       input.value = "";
       empty.innerText = "";
+      mac.classList.remove("profile");
+      mac.innerText = "ch@ : MacBookAir ~ % \u00a0";
     }
     //input = clear
     else if (input.value === "clear") {
@@ -140,7 +144,7 @@ function fnEnterkey() {
       const lsProfile = document.createElement("span");
       lsProfile.style.color = "dodgerblue";
       lsProfile.innerText =
-        "/home \u00a0 /music \u00a0 /profile \u00a0 /main \u00a0 /git";
+        "/home \u00a0 /ranking \u00a0 /music \u00a0 /profile \u00a0 /git";
       empty.append(lsProfile);
       input.value = "";
     }
@@ -186,9 +190,9 @@ function fnEnterkey() {
       window.open("https://github.com/HOJOON07");
       input.value = "";
     }
-    //cd profile
+    //cd profile ㅎㅇ
     else if (input.value === "cd profile") {
-      location.href = "realProfile.html";
+      window.open("realProfile.html", "_self");
       input.value = "";
     }
     //cd git
@@ -230,7 +234,14 @@ function fnEnterkey() {
     }
     //input = cd main
     else if (input.value === "cd home") {
-      location.href = "../mainpage/wave/index.html";
+      window.open("index.html", "_self");
+      input.value = "";
+    } else if (input.value === "cd music") {
+      window.open("playList.html", "_self");
+      input.value = "";
+    } else if (input.value === "cd ranking") {
+      window.open("chart.html", "_self");
+      input.value = "";
     }
   }
 }
